@@ -1,0 +1,281 @@
+.menu-cont {
+    position: absolute;
+    display: none;
+    cursor: pointer;
+    padding: 20px;
+    right: 1px;
+    top: 5px;
+    z-index: 20;
+}
+
+.menu-txt {
+    display: inline-block;
+    margin-right: 15px;
+    position: relative;
+    bottom: 3px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    letter-spacing: 6px;
+    font-weight: 700;
+    -webkit-font-smoothing: antialiased;
+}
+
+.menu {
+    content: "";
+    display: inline-block;
+    position: relative;
+    float: right;
+    opacity: 1;
+    height: 3px;
+    width: 30px;
+    background-color: #fff;
+    -webkit-transition: -webkit-transform 400ms ease;
+    transition: -webkit-transform 400ms ease;
+    transition: transform 400ms ease;
+    transition: transform 400ms ease, -webkit-transform 400ms ease;
+}
+
+.menu.active {
+    -webkit-transform: rotate(45deg) translateY(12px);
+    transform: rotate(45deg) translateY(12px);
+}
+
+.menu.active:before {
+    opacity: 0;
+}
+
+.menu.active:after {
+    -webkit-transform: rotate(-450deg) translateX(16px);
+    transform: rotate(-450deg) translateX(16px);
+}
+
+.menu:before, .menu:after {
+    content: "";
+    display: block;
+    position: absolute;
+    opacity: 1;
+    height: 3px;
+    width: 30px;
+    background-color: #fff;
+}
+
+.menu:before {
+    top: 8px;
+    -webkit-transition: opacity 400ms ease;
+    transition: opacity 400ms ease;
+}
+
+.menu:after {
+    top: 16px;
+    -webkit-transition: -webkit-transform 400ms ease;
+    transition: -webkit-transform 400ms ease;
+    transition: transform 400ms ease, -webkit-transform 400ms ease;
+}
+
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+	.fn-header__navbar{
+		text-align: left;
+	}
+	.fn-header__navbar li a{
+	font-size: 15px;
+	    padding: 10px 0;
+	}
+	.fn-phone a {
+	    color: #fff;
+	    font-size: 13px;
+	}
+
+	.fn-student__middle-item{
+		position: relative;
+		width: 100%;
+		left: 0;
+		transform: translateX(0%);
+	}
+	.fn-students__item{
+		display: block;
+		margin: 20px 0;
+	}
+	.fn-students__item li{
+		width: 90%;
+		display: block;
+		margin: 0 auto 20px;
+		text-align: center;
+	}
+	.fn-students__item li:last-child{
+		margin-right: auto;
+	}
+	.fn-students__item-left{
+		padding: 0;
+	}
+	.fn-student__middle-item p {
+	    padding: 0px 0 0 0;
+	    font-size: 16px;
+	}
+	.fn-student__middle-item a{
+		font-size: 16px;
+	}
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	.none{
+		display: none;
+	}
+	.title-form-banner{
+		text-align: center;
+	}
+	.menu-cont{
+		display: block;
+	}
+	.fn-header__navigation{
+		display: none;
+	}
+	 .fn-banner-two h1{
+		font-size: 20px;
+	}
+	.fn-banner h1{
+		font-size: 24px;
+	}
+
+	.fn-banner h2, .fn-banner-two h2, .fn-banner-two p{
+		font-size: 16px;
+	}
+	.fn-banner-two, .fn-banner{
+		height: 800px;
+	}
+	.border{
+		border: none;
+	}
+	.fn-top-header__item p{
+		font-size: 20px;
+	}
+	.fn-title-section h3{
+		margin: 0;
+		font-size: 21px;
+	}
+
+	.price {
+	    font-size: 47px;
+	}
+
+	.form-input input{
+		width: 100%;
+		height: auto;
+	}
+	.fn-btn{
+		width: 100%;
+		height: auto;
+	}
+
+	.fn-doubt__image{
+		margin: 40px 0;
+	}
+	.fn-day{
+		font-size: 30px;
+	}
+	.fn-day{
+		font-size: 20px;
+	}
+	.fn-students__list li{
+		width: 100%;
+		display: block;
+	}
+	.fn-students__list{
+		display: block;
+	}
+	.fn-btn-blue{
+		height: auto;
+	}
+
+	.fn-number{
+		margin: 20px 0;
+	}
+	.fn-contact__form {
+	    width: 86%;
+	    margin: 0 auto;
+	}
+	.fn-title-section p{
+		font-size: 16px;
+	}
+	.fn-title-section{
+		width: 90%;
+	}
+	.fn-programm__text .desrk {
+	    font-size: 17px;
+	}
+
+	.fn-license__wrapper p{
+		font-size: 20px;
+	}
+	.overflow{
+		display: none;
+	}
+
+	.fn-header__navigation{
+		position: fixed;
+		background: #545454f0;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		 left: 0;
+	}
+    .fn-header__navbar{
+    	margin: 50% 0;
+    }
+	.fn-header__navbar li{
+		display: block;
+	}
+
+	.fn-students__list li p {
+	    font-size: 16px;
+	    color: #183e54;
+	    font-weight: bold;
+	    margin: 5px 0 15px;
+	}
+}
+@media only screen and (max-width : 760px) {
+
+}
+/* Extra Small Devices, Phones */
+
+@media only screen and (max-width : 480px) {
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width :  1200px) {
+
+}
+
