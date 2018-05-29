@@ -73,8 +73,14 @@
     transition: transform 400ms ease, -webkit-transform 400ms ease;
 }
 
+/*
+.slick-active{
+	margin-left: 131px;
+} */
 
-
+.slick-slide img{
+	width: 100%;
+}
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
 
@@ -124,21 +130,6 @@
 	.fn-student__middle-item a{
 		font-size: 16px;
 	}
-}
-/* Small Devices, Tablets */
-@media only screen and (max-width : 768px) {
-	.none{
-		display: none;
-	}
-	.title-form-banner{
-		text-align: center;
-	}
-	.menu-cont{
-		display: block;
-	}
-	.fn-header__navigation{
-		display: none;
-	}
 	 .fn-banner-two h1{
 		font-size: 20px;
 	}
@@ -152,8 +143,55 @@
 	.fn-banner-two, .fn-banner{
 		height: 800px;
 	}
+	.overflow{
+		display: none;
+	}
+	.fn-student__slide-middle--item p {
+	    padding: 00px 168px 0 0;
+	    font-size: 20px;
+	}
+
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
+	.fn-student__slide-middle{
+		position: 	relative;
+	}
+	.fn-smi{
+		height: auto;
+	}
+	.fn-student__slide-middle--item{
+		width: 	100%!important;
+	}
+	.fn-student__slide-wrapp {
+	    width: 500px;
+	    margin: 0 auto;
+	    height: 382px !important;
+	}
+	.slider-left{
+		display: none;
+	}
+	.fn-student__slide-middle--item p{
+		font-size: 	18px;
+		padding: 0;
+	}
+	.none{
+		display: none;
+	}
+	.title-form-banner{
+		text-align: center;
+	}
+	.menu-cont{
+		display: block;
+	}
+	.fn-header__navigation{
+		display: none;
+	}
+
 	.border{
 		border: none;
+		padding: 0;
 	}
 	.fn-top-header__item p{
 		font-size: 20px;
@@ -197,7 +235,7 @@
 	}
 
 	.fn-number{
-		margin: 20px 0;
+		margin: 20px auto;
 	}
 	.fn-contact__form {
 	    width: 86%;
@@ -215,9 +253,6 @@
 
 	.fn-license__wrapper p{
 		font-size: 20px;
-	}
-	.overflow{
-		display: none;
 	}
 
 	.fn-header__navigation{
@@ -241,6 +276,25 @@
 	    font-weight: bold;
 	    margin: 5px 0 15px;
 	}
+	.fn-form-popup{
+		height: auto;
+	}
+	.fn-form-popup-two{
+		left: 0;
+	}
+	.fn-popup-sosial li{
+		width: 100%;
+		display: block;
+	}
+	.fn-students__list{
+		padding: 0;
+	}
+	.fn-footer__social{
+		text-align: center;
+	}
+	.fn-footer__nav li a{
+		font-size: 14px;
+	}
 }
 @media only screen and (max-width : 760px) {
 
@@ -253,6 +307,8 @@
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px) {
+
+
 
 }
 
