@@ -10,6 +10,9 @@ $('.menu-cont').on('click', function() {
 });
 
 
+
+
+
 $("#phone, #phone-two, #phone-three, #phone-four").mask("+7(999) 999-9999");
 
 $("a[data-fancybox]").fancybox();
@@ -74,6 +77,7 @@ $("a[data-fancybox]").fancybox();
       $('.btn-form').on('click', function() {
         $(".fn-contact__form-big").trigger('reset');
         $('.mest__timer').html(function(i, val) { return val*1-1 });
+        $('.fn-form-popup').slideToggle(200);
       });
 
 
