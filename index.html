@@ -18,9 +18,34 @@
 </head>
 <body>
 
-	<div class="fn-wrapper">
+<div class="fn-wrapper">
 
-
+	<div id="popup1" class="overlay">
+		<div class="popup fn-form-popup-two">
+			<a class="close" href="#">&times;</a>
+			<h2>Спасибо</h2>
+			<p>Наш менеджер свяжется с Вами в ближайшее время.</p>
+			<p class="text-blue">Подписывайтесь на наши соц.сети и будьте в курсе последних новостей</p>
+			<ul class="fn-popup-sosial">
+				<li><a href="" class="sosial">
+					<i class="fa fa-vk" aria-hidden="true"></i></a>
+					<p>Пишем про инвестиции, акции и компании</p></li>
+				<li>
+					<a href="" class="sosial">
+						<i class="fa fa-google-plus" aria-hidden="true"></i>
+					</a>
+					<p>Рассказываем интересные истории из мира финансов</p></li>
+				<li>
+					<a href="" class="sosial">
+						<i class="fa fa-youtube-play" aria-hidden="true"></i>
+					</a>
+					<p>Презентуем наши инвестиционные портфели</p></li>
+				<li>
+					<a href="" class="sosial-img"><img src="img/logo.png"></a>
+					<p>Размышляем на темы, которые нас волнуют</p></li>
+			</ul>
+		</div>
+	</div>
 
 
 	<section class="slider">
@@ -33,11 +58,11 @@
 								<div class="fn-header__logo">
 									<a href=""><img src="img/logo.png" class="img-responsive"></a>
 								</div>
-								<a class="menu-cont" href="#">
+								<!-- <a class="menu-cont" href="#">
 									<span class="menu"></span>
 									<span class="menu-txt">
 									</span>
-								 </a>
+								 </a> -->
 							</div>
 							<div class="col-md-8 col-sm-8 ">
 								<nav  class="fn-header__navigation">
@@ -64,20 +89,20 @@
 							в Российской Федерации!</h1>
 							<h2>Мы набираем бесплатную тестовую<br>
 							группу из 10 человек!</h2>
-							<form class="fn-contact__form-big">
+							<form class="fn-contact__form-big" onsubmit="return false;">
 								<div class="col-md-4">
 									<div class="form-input">
-										<input type="text" name="name" placeholder="Ваше имя">
+										<input type="text"  placeholder="Ваше имя" required>
 									</div>
 									</div>
 									<div class="col-md-4">
 										<div class="form-input">
-											<input type="text" name="phone" id="phone" placeholder="Ваше телефон">
+											<input type="text"  id="phone" placeholder="Ваше телефон" required>
 										</div>
 									</div>
 									<div class="col-md-4">
 										<div class="form-input">
-											<button class="fn-btn ">Записаться</button>
+											<button  class="fn-btn btn-form" >Записаться</button>
 										</div>
 									</div>
 
@@ -85,10 +110,11 @@
 							<div class="fn-form-popup">
 								<p>Иван Иванович записался  на бесплатное обучение</p>
 								<div class="fn-number fn-blue">
-									8
+									<span class="mest__timer">8</span>
 									<p>мест осталось</p>
 								</div>
 							</div>
+
 						</div>
 
 					</div>
@@ -121,7 +147,7 @@
 									</nav>
 								</div>
 								<div class="col-md-2">
-									<p class="fn-phone none"><a href="">+7 (925) 864 11 13</a></p>
+									<p class="fn-phone none"><a href="tel:+79258641113">+7 (925) 864 11 13</a></p>
 
 								</div>
 							</div>
@@ -134,7 +160,7 @@
 								<h1>Бесплатное обучение биржевой торговле в первом
 								и единственном институте трейндинга и инвестиций
 								в Российской Федерации!</h1>
-								<div class="fn-form-popup-two">
+								<!-- <div class="fn-form-popup-two">
 									<h2>Спасибо</h2>
 									<a class="close" href="#popup1">&times;</a>
 									<p>Наш менеджер свяжется с Вами в ближайшее время.</p>
@@ -156,7 +182,7 @@
 										<li>
 											<a href="" class="sosial-img"><img src="img/logo.png"></a>
 											<p>Размышляем на темы, которые нас волнуют</p></li>
-									</ul>
+									</ul> -->
 								</div>
 							</div>
 							<div class="col-md-6">
@@ -173,19 +199,19 @@
 									<h3 class="title-form-banner">Подам заявку на обучения</h3>
 									<div class="col-md-4 padd-none">
 										<div class="fn-number fn-blue">
-											8
+											<span class="mest__timer-four">8</span>
 											<p>мест осталось</p>
 										</div>
 									</div>
 									<div class="col-md-7 padd-none">
 										<div class="form-input">
-											<input type="text" name="name" placeholder="Ваше имя">
+											<input type="text" name="name" placeholder="Ваше имя" required>
 										</div>
 										<div class="form-input">
-											<input type="text" name="phone" id="phone-two" placeholder="Ваше телефон">
+											<input type="text" name="phone" id="phone-two" placeholder="Ваше телефон" required>
 										</div>
 										<div class="form-input">
-											<button class="fn-btn-blue ">Записаться</button>
+											<a class="fn-btn-blue btn-form-four"  href="#popup1">Записаться</a>
 										</div>
 									</div>
 
@@ -296,22 +322,22 @@
 					</div>
 
 					<div class="col-md-7">
-						<form class="fn-contact__form-big">
+						<form class="fn-contact__form-big ">
 							<h5 class="form-title">Обучайтесь бесплатно. <br>Такого больше не будет НИКОГДА!</h5>
 							<div class="col-md-7 padd-none">
 								<div class="form-input">
-									<input type="text" name="name" placeholder="Ваше имя">
+									<input type="text"  placeholder="Ваше имя" required>
 								</div>
 								<div class="form-input">
-									<input type="text" name="phone" id="phone-three" placeholder="Ваше телефон">
+									<input type="text" id="phone-three" placeholder="Ваше телефон" required>
 								</div>
 								<div class="form-input">
-									<button class="fn-btn ">Записаться</button>
+									<button class="fn-btn btn-form-two">Записаться</button>
 								</div>
 							</div>
 							<div class="col-md-4 padd-none">
 								<div class="fn-number">
-									8
+									<span class="mest__timer-two">8</span>
 									<p>мест осталось</p>
 								</div>
 							</div>
@@ -830,19 +856,19 @@
 				<form class="fn-contact__form">
 					<div class="col-md-4 padd-none">
 						<div class="fn-number">
-							8
+							<span class="mest__timer-three">8</span>
 							<p>мест осталось</p>
 						</div>
 					</div>
 					<div class="col-md-8 padd-none">
 						<div class="form-input">
-							<input type="text" name="name" placeholder="Ваше имя">
+							<input type="text"  placeholder="Ваше имя" required>
 						</div>
 						<div class="form-input">
-							<input type="text" name="phone" id="phone-four" placeholder="Ваше телефон">
+							<input type="text"  id="phone-four" placeholder="Ваше телефон" required>
 						</div>
 						<div class="form-input">
-							<button class="fn-btn ">Записаться</button>
+							<button class="fn-btn  btn-form-three">Записаться</button>
 						</div>
 					</div>
 				</form>

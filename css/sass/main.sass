@@ -239,9 +239,11 @@ section
 .fn-btn
 	border-radius: 50px
 	width: 377px
+	display: block
 	height: 68px
 	padding: 14px 21px
 	font-size: 20px
+	cursor: pointer
 	color: #fff
 	background: #01ddb5
 	border: 1px solid #01ddb5
@@ -253,8 +255,10 @@ section
 	border-radius: 50px
 	width: 100%
 	height: 68px
+	display: block
 	padding: 14px 21px
 	font-size: 20px
+	cursor: pointer
 	color: #fff
 	border: 1px solid #1b3a4f
 	background: #1b3a4f
@@ -500,6 +504,7 @@ section
 
 .container-fluid
 	padding: 0
+	padding-right: 25px
 
 .fn-footer__social
 	padding: 0
@@ -547,7 +552,7 @@ section
 
 .fn-form-popup-two
 	position: absolute
-	top: 50%
+	top: 0%
 	background: #fafafa
 	border: 3px solid #00bd9b
 	border-radius: 5px
@@ -602,6 +607,7 @@ section
 	position: absolute
 	top: 20px
 	right: 30px
+	cursor: pointer
 	transition: all 0.2s
 	font-size: 30px
 	font-weight: bold
@@ -612,16 +618,80 @@ section
 .fn-students__item
 	padding: 0
 	margin: 80px 0 0
- 	list-style: none
+	list-style: none
 	display: flex
 	.item
 		background: #01ddb5
 		padding: 60px 10px
 		margin: 0 10px
 		height: 217px
+		display: flex
 	li:last-child
 		margin-right: 0
 
 .fn-smi
 	height: 700px
 
+
+.overlay
+	position: fixed
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	background: rgba(0, 0, 0, 0.7)
+	transition: opacity 500ms
+	visibility: hidden
+	opacity: 0
+
+.overlay:target
+	visibility: visible
+	opacity: 1
+
+
+
+.overlay
+	position: fixed
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	z-index: 999
+	background: rgba(0, 0, 0, 0.7)
+	transition: opacity 500ms
+	visibility: hidden
+	opacity: 0
+	&:target
+		visibility: visible
+		opacity: 1
+
+.popup
+	margin: 70px auto
+	padding: 20px
+	background: #fff
+	border-radius: 5px
+	width: 100%
+	position: relative
+	transition: all 5s ease-in-out
+	h2
+		margin-top: 0
+		color: #333
+		font-family: Tahoma, Arial, sans-serif
+	.close
+		position: absolute
+		top: 20px
+		right: 30px
+		transition: all 200ms
+		font-size: 30px
+		font-weight: bold
+		text-decoration: none
+		color: #333
+		&:hover
+			color: #06D85F
+	.content
+		max-height: 30%
+		overflow: auto
+
+@media screen and (max-width: 700px)
+	.box, .popup
+	width: 70%

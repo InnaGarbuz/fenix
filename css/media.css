@@ -5,7 +5,7 @@
     padding: 20px;
     right: 1px;
     top: 5px;
-    z-index: 20;
+    z-index:  99999999;
 }
 
 .menu-txt {
@@ -264,7 +264,7 @@
 		 left: 0;
 	}
     .fn-header__navbar{
-    	margin: 50% 0;
+    	margin: 32% 0;
     }
 	.fn-header__navbar li{
 		display: block;
@@ -294,6 +294,19 @@
 	}
 	.fn-footer__nav li a{
 		font-size: 14px;
+	}
+
+	.fn-form-popup{
+		width: 96%;
+		right: auto;
+		margin: 0 auto;
+		bottom: -183px;
+	}
+	.fn-header__navbar li a{
+		font-size: 26px;
+	}
+	.fn-header__navbar{
+		text-align: center;
 	}
 }
 @media only screen and (max-width : 760px) {
