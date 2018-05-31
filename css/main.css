@@ -33,7 +33,8 @@ section {
 .fn-header {
   width: 100%;
   position: absolute;
-  padding: 20px 0; }
+  padding: 20px 0;
+  z-index: 2; }
 
 .fn-banner {
   width: 100%;
@@ -229,6 +230,7 @@ section {
   width: 377px;
   display: block;
   height: 68px;
+  text-align: center;
   padding: 14px 21px;
   font-size: 20px;
   cursor: pointer;
@@ -448,7 +450,6 @@ section {
   .fn-students__slider .fn-students__item {
     background: #01ddb5;
     padding: 60px 10px;
-    width: 208px !important;
     overflow: hidden;
     margin-right: 18px;
     height: 208px;
@@ -469,7 +470,7 @@ section {
 .fn-student__slide-middle--item {
   background: url("../img/bag.png") 50% center/cover no-repeat;
   width: 500px !important;
-  left: 50%;
+  left: 40%;
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
@@ -515,12 +516,32 @@ section {
     text-align: center; }
 
 .fn-students__item-left {
-  padding-left: 50px; }
+  padding-left: 80px;
+  margin: 80px 0 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+    flex-direction-flex-wrap: wrap;
+  /* align-items: center; */ }
+  .fn-students__item-left .item {
+    background: #01ddb5;
+    padding: 60px 10px;
+    margin: 0 9px;
+    height: 190px; }
+  .fn-students__item-left li:last-child {
+    margin-right: 0; }
+    .fn-students__item-left li:last-child img {
+      width: 100%; }
 
 .fn-form-popup {
-  position: absolute;
-  right: 0px;
-  bottom: -121px;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
   background: #fff;
   border: 3px solid #00bd9b;
   border-radius: 5px;
@@ -607,20 +628,28 @@ section {
 .fn-students__item {
   padding: 0;
   margin: 80px 0 0;
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
+  list-style: none; }
   .fn-students__item .item {
     background: #01ddb5;
-    padding: 60px 10px;
-    margin: 0 10px;
-    height: 217px;
+    padding: 10px 30px;
+    margin: 0 9px;
+    height: 190px;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
   .fn-students__item li:last-child {
     margin-right: 0; }
+    .fn-students__item li:last-child img {
+      width: 100%; }
 
 .fn-smi {
   height: 700px; }
@@ -631,40 +660,15 @@ section {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.7);
-  -webkit-transition: opacity 500ms;
-  -o-transition: opacity 500ms;
-  transition: opacity 500ms;
-  visibility: hidden;
-  opacity: 0; }
-
-.overlay:target {
-  visibility: visible;
-  opacity: 1; }
-
-.overlay {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
   z-index: 999;
-  background: rgba(0, 0, 0, 0.7);
-  -webkit-transition: opacity 500ms;
-  -o-transition: opacity 500ms;
-  transition: opacity 500ms;
-  visibility: hidden;
-  opacity: 0; }
-  .overlay:target {
-    visibility: visible;
-    opacity: 1; }
+  background: rgba(0, 0, 0, 0.7); }
 
 .popup {
   margin: 70px auto;
   padding: 20px;
   background: #fff;
   border-radius: 5px;
-  width: 100%;
+  width: 80%;
   position: relative;
   -webkit-transition: all 5s ease-in-out;
   -o-transition: all 5s ease-in-out;

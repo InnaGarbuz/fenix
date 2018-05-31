@@ -11,8 +11,6 @@ $('.menu-cont').on('click', function() {
 
 
 
-
-
 $("#phone, #phone-two, #phone-three, #phone-four").mask("+7(999) 999-9999");
 
 $("a[data-fancybox]").fancybox();
@@ -30,14 +28,28 @@ $("a[data-fancybox]").fancybox();
       slidesToShow: 2,
       slidesToScroll: 1,
       fade: true,
-      arrow: false,
-      asNavFor: '.slider-right, .fn-student__slide-middle'
+      arrows: false,
+      autoplay: true,
+      asNavFor: '.slider-right, .fn-student__slide-middle',
+      responsive: [
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+          // You can unslick at a given breakpoint now by adding:
+          // settings: "unslick"
+          // instead of a settings object
+        ]
     });
 
   $('.slider-right').slick({
-    slidesToShow: 2,
+    slidesToShow: 3,
     slidesToScroll: 1,
-    arrow: false,
+    arrows: false,
+    autoplay: true,
     asNavFor: '.slider-left, .fn-student__slide-middle',
 
     });
@@ -49,7 +61,8 @@ $("a[data-fancybox]").fancybox();
     slidesToScroll: 1,
     arrows: false,
     fade: true,
-    asNavFor: '.slider-left',
+    autoplay: true,
+    asNavFor: '.slider-left, .slider-right',
   });
 
 
@@ -63,50 +76,81 @@ $("a[data-fancybox]").fancybox();
     });
 
 
-//form 1
+    // open modal
+    var wrap = $('#wrapper'),
+         btn = $('.open-modal-btn'),
+         modal = $('.cover, .modal, .content');
 
-    $('.fn-contact__form-big, .fn-contact__form').each(function(){
-        if(!$(this).val() || $(this).val() == ''){
-           send = false;
-        }
+    btn.on('click', function() {
+      modal.fadeIn();
     });
 
-    if(!send);
-
-    var count = 0;
-      $('.btn-form').on('click', function() {
-        $(".fn-contact__form-big").trigger('reset');
-        $('.mest__timer').html(function(i, val) { return val*1-1 });
-        $('.fn-form-popup').slideToggle(200);
-      });
 
 
-//form 2
-
-    var count = 0;
-      $('.btn-form-two').on('click', function() {
-        $(".fn-contact__form-big").trigger('reset');
-        $('.mest__timer-two').html(function(i, val) { return val*1-1 });
-      });
 
 
-//form2
+});
 
-    var count = 0;
-      $('.btn-form-three').on('click', function() {
-        $(".fn-contact__form").trigger('reset');
-        $('.mest__timer-three').html(function(i, val) { return val*1-1 });
-      });
+//counter
+$(function () {
 
-      var count = 0;
-        $('.btn-form-four').on('click', function() {
-          $(".fn-contact__form-big").trigger('reset');
-          $('.mest__timer-four').html(function(i, val) { return val*1-1 });
-        });
+    var counter = 8; //счетчик максимального количества мест
+
+    /**
+     * загоняем интервал в переменную что бы можно было его погасить
+     * @type {number}
+     */
+    var showPopupInterval = setInterval(function () {
+        $(".fn-form-popup").slideToggle(400); //показывает всплывашку в скобках скорость
+        hideToggle(); // скрываем всплывашку
+        changePlaceCounter(); //меняем счетчик
+
+        if (counter === 1) {
+            clearInterval(showPopupInterval); //если равен одному, выключаем интервал
+        }
+    }, 37000); //показываем всплывашку каждые 37 секунд 37 * 1000
+
+    /**
+     * функция которая скрывает всплывашку с изменением количества мест
+     */
+    function hideToggle() {
+        setTimeout(function () {
+            $(".fn-form-popup").slideToggle(400);
+
+        }, 3000)//скрывать через 3 секунды всплывашку 3 * 1000
+    }
+
+    /**
+     * меняем счетчик и апдейтим значение во всех местах где он используеться
+     */
+    function changePlaceCounter() {
+        counter--;
+        $('.mest__timer-two, .mest__timer-three, .mest__timer-four').html(counter);
+        $('.timer').html(counter);
+    }
 
 
 });
 
 
-
-
+$(document).ready(function () { // вся мaгия пoсле зaгрузки стрaницы
+    $('form.fn-contact__form-big, form.fn-contact__form').submit(function (event) { // лoвим клик пo ссылки с id="go"
+        event.preventDefault(); // выключaем стaндaртную рoль элементa
+        $('#overlay').fadeIn(400, // снaчaлa плaвнo пoкaзывaем темную пoдлoжку
+            function () { // пoсле выпoлнения предъидущей aнимaции
+                $('#modal_form')
+                    .css('display', 'block') // убирaем у мoдaльнoгo oкнa display: none;
+                    .animate({opacity: 1, top: '5%'}, 200); // плaвнo прибaвляем прoзрaчнoсть oднoвременнo сo съезжaнием вниз
+            });
+    });
+    /* Зaкрытие мoдaльнoгo oкнa, тут делaем тo же сaмoе нo в oбрaтнoм пoрядке */
+    $('#modal_close, #overlay').click(function () { // лoвим клик пo крестику или пoдлoжке
+        $('#modal_form')
+            .animate({opacity: 0, top: '5%'}, 200,  // плaвнo меняем прoзрaчнoсть нa 0 и oднoвременнo двигaем oкнo вверх
+                function () { // пoсле aнимaции
+                    $(this).css('display', 'none'); // делaем ему display: none;
+                    $('#overlay').fadeOut(400); // скрывaем пoдлoжку
+                }
+            );
+    });
+});

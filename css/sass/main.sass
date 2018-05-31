@@ -38,6 +38,7 @@ section
 	width: 100%
 	position: absolute
 	padding: 20px 0
+	z-index: 2
 
 
 .fn-banner
@@ -242,6 +243,7 @@ section
 	width: 377px
 	display: block
 	height: 68px
+	text-align: center
 	padding: 14px 21px
 	font-size: 20px
 	cursor: pointer
@@ -455,7 +457,6 @@ section
 	.fn-students__item
 		background: #01ddb5
 		padding: 60px 10px
-		width: 208px!important
 		overflow: hidden
 		margin-right: 18px
 		height: 208px
@@ -475,7 +476,7 @@ section
 .fn-student__slide-middle--item
 	background: url('../img/bag.png')50% center / cover no-repeat
 	width: 500px!important
-	left: 50%;
+	left: 40%;
 	-webkit-transform: translateX(-50%);
 	-moz-transform: translateX(-50%);
 	-ms-transform: translateX(-50%);
@@ -526,13 +527,28 @@ section
 
 
 .fn-students__item-left
-	padding-left: 50px
+	padding-left: 80px
+	margin: 80px 0 0
+	list-style: none
+	display: flex
+	flex-direction: row
+  flex-wrap: wrap
+    /* align-items: center; */
+	.item
+		background: #01ddb5
+		padding: 60px 10px
+		margin: 0 9px
+		height: 190px
+	li:last-child
+		margin-right: 0
+		img
+			width: 100%
 
 
 .fn-form-popup
-	position: absolute
-	right: 0px
-	bottom: -121px
+	position: fixed
+	right: 20px
+	bottom: 20px
 	background: #fff
 	border: 3px solid #00bd9b
 	border-radius: 5px
@@ -621,34 +637,24 @@ section
 	padding: 0
 	margin: 80px 0 0
 	list-style: none
-	display: flex
 	.item
 		background: #01ddb5
-		padding: 60px 10px
-		margin: 0 10px
-		height: 217px
+		padding: 10px 30px
+		margin: 0 9px
+		height: 190px
 		display: flex
+		flex-direction: row
+		flex-wrap: wrap;
+		align-items: center
 	li:last-child
 		margin-right: 0
+		img
+			width: 100%
 
 .fn-smi
 	height: 700px
 
 
-.overlay
-	position: fixed
-	top: 0
-	bottom: 0
-	left: 0
-	right: 0
-	background: rgba(0, 0, 0, 0.7)
-	transition: opacity 500ms
-	visibility: hidden
-	opacity: 0
-
-.overlay:target
-	visibility: visible
-	opacity: 1
 
 
 
@@ -660,19 +666,14 @@ section
 	right: 0
 	z-index: 999
 	background: rgba(0, 0, 0, 0.7)
-	transition: opacity 500ms
-	visibility: hidden
-	opacity: 0
-	&:target
-		visibility: visible
-		opacity: 1
+
 
 .popup
 	margin: 70px auto
 	padding: 20px
 	background: #fff
 	border-radius: 5px
-	width: 100%
+	width: 80%
 	position: relative
 	transition: all 5s ease-in-out
 	h2
@@ -693,6 +694,10 @@ section
 	.content
 		max-height: 30%
 		overflow: auto
+
+
+
+
 
 @media screen and (max-width: 700px)
 	.box, .popup

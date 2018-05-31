@@ -14,38 +14,45 @@
 	<link rel="stylesheet" href="css/main.css" />
 	<link rel="stylesheet" href="css/media.css" />
 	<link rel="stylesheet" href="libs/fancybox/jquery.fancybox.css" />
+	<style type="text/css">
+
+	</style>
 
 </head>
 <body>
 
 <div class="fn-wrapper">
 
-	<div id="popup1" class="overlay">
-		<div class="popup fn-form-popup-two">
-			<a class="close" href="#">&times;</a>
-			<h2>Спасибо</h2>
-			<p>Наш менеджер свяжется с Вами в ближайшее время.</p>
-			<p class="text-blue">Подписывайтесь на наши соц.сети и будьте в курсе последних новостей</p>
-			<ul class="fn-popup-sosial">
-				<li><a href="" class="sosial">
-					<i class="fa fa-vk" aria-hidden="true"></i></a>
-					<p>Пишем про инвестиции, акции и компании</p></li>
-				<li>
-					<a href="" class="sosial">
-						<i class="fa fa-google-plus" aria-hidden="true"></i>
-					</a>
-					<p>Рассказываем интересные истории из мира финансов</p></li>
-				<li>
-					<a href="" class="sosial">
-						<i class="fa fa-youtube-play" aria-hidden="true"></i>
-					</a>
-					<p>Презентуем наши инвестиционные портфели</p></li>
-				<li>
-					<a href="" class="sosial-img"><img src="img/logo.png"></a>
-					<p>Размышляем на темы, которые нас волнуют</p></li>
-			</ul>
-		</div>
+	<div id="modal_form"><!-- Сaмo oкнo -->
+	      <div class="popup fn-form-popup-two">
+	      	<span id="modal_close">X</span> <!-- Кнoпкa зaкрыть -->
+	      			<h2>Спасибо</h2>
+	      			<p>Наш менеджер свяжется с Вами в ближайшее время.</p>
+	      			<p class="text-blue">Подписывайтесь на наши соц.сети и будьте в курсе последних новостей</p>
+	      			<ul class="fn-popup-sosial">
+	      				<li><a href="" class="sosial">
+	      					<i class="fa fa-vk" aria-hidden="true"></i></a>
+	      					<p>Пишем про инвестиции, акции и компании</p></li>
+	      				<li>
+	      					<a href="" class="sosial">
+	      						<i class="fa fa-google-plus" aria-hidden="true"></i>
+	      					</a>
+	      					<p>Рассказываем интересные истории из мира финансов</p></li>
+	      				<li>
+	      					<a href="" class="sosial">
+	      						<i class="fa fa-youtube-play" aria-hidden="true"></i>
+	      					</a>
+	      					<p>Презентуем наши инвестиционные портфели</p></li>
+	      				<li>
+	      					<a href="" class="sosial-img"><img src="img/logo.png"></a>
+	      					<p>Размышляем на темы, которые нас волнуют</p></li>
+	      			</ul>
+	      		</div>
 	</div>
+
+	<div id="overlay"></div><!-- Пoдлoжкa -->
+
+
 
 
 	<section class="slider">
@@ -89,7 +96,7 @@
 							в Российской Федерации!</h1>
 							<h2>Мы набираем бесплатную тестовую<br>
 							группу из 10 человек!</h2>
-							<form class="fn-contact__form-big" onsubmit="return false;">
+							<form class="fn-contact__form-big" >
 								<div class="col-md-4">
 									<div class="form-input">
 										<input type="text"  placeholder="Ваше имя" required>
@@ -102,7 +109,8 @@
 									</div>
 									<div class="col-md-4">
 										<div class="form-input">
-											<button  class="fn-btn btn-form" >Записаться</button>
+
+											<button class="fn-btn btn-form-four " >Записаться</button>
 										</div>
 									</div>
 
@@ -111,7 +119,7 @@
 								<div class="fn-form-popup__wrapper">
 									<p>Иван Иванович записался  на бесплатное обучение</p>
 									<div class="fn-number fn-blue">
-										<span class="mest__timer">8</span>
+										<span class="timer">8</span>
 										<p>мест осталось</p>
 									</div>
 								</div>
@@ -187,7 +195,7 @@
 											<p>Размышляем на темы, которые нас волнуют</p></li>
 									</ul> -->
 								</div>
-							</div>
+
 							<div class="col-md-6">
 								<p>По статистике 97% людей сливают свои деньги
 								на финансовых рынках по причине не знания!
@@ -214,8 +222,8 @@
 											<input type="text" name="phone" id="phone-two" placeholder="Ваше телефон" required>
 										</div>
 										<div class="form-input">
-											<a class="fn-btn-blue btn-form-four"  href="#popup1">Записаться</a>
-										</div>
+											<button  class="fn-btn-blue btn-form-four" >Записаться</button>
+										</div
 									</div>
 
 								</form>
@@ -335,7 +343,7 @@
 									<input type="text" id="phone-three" placeholder="Ваше телефон" required>
 								</div>
 								<div class="form-input">
-									<button class="fn-btn btn-form-two">Записаться</button>
+									<button class="fn-btn btn-form-four"  href="#popup1">Записаться</button>
 								</div>
 							</div>
 							<div class="col-md-4 padd-none">
@@ -694,54 +702,8 @@
 
 
 					</div>
-					<!-- <div class="col-md-4">
-						<div class="slider-left fn-students__slider">
-								<div class="col-md-3 fn-students__item">
-									<img src="img/log1.png">
-								</div>
 
-								<div class="col-md-3 fn-students__item">
-									<img src="img/radius.png">
-								</div>
-
-								<div class="col-md-3 fn-students__item">
-									<img src="img/Logo_aif2.png">
-								</div>
-								<div class="col-md-3 fn-students__item">
-									<img src="img/moscov.png">
-								</div>
-
-								<div class="col-md-3 fn-students__item">
-									<img src="img/radius.png">
-								</div>
-						</div>
-
-
-					</div> -->
-
-					<!-- <div class="col-md-8">
-						<div class="slider-right fn-students__slider  ">
-								<div class="col-md-3 fn-students__item">
-									<img src="img/log1.png">
-								</div>
-
-								<div class="col-md-3 fn-students__item">
-									<img src="img/radius.png">
-								</div>
-
-								<div class="col-md-3 fn-students__item">
-									<img src="img/Logo_aif2.png">
-								</div>
-								<div class="col-md-3 fn-students__item">
-									<img src="img/moscov.png">
-								</div>
-
-								<div class="col-md-3 fn-students__item">
-									<img src="img/radius.png">
-								</div>
-						</div>
-					</div> -->
-					<div class="col-md-6 col-sm-6">
+					<div class="col-md-5 col-sm-5">
 						<div class="fn-students__item   slider-left">
 
 							<div class="item">
@@ -769,8 +731,8 @@
 
 						</div>
 					</div>
-						<div class="col-md-6 col-sm-6">
-							<div class="fn-students__item fn-students__item-left slider-right">
+						<div class="col-md-7 col-sm-7">
+							<div class=" fn-students__item-left slider-right">
 
 								<div class="item">
 									<img src="img/Logo_aif2.png">
@@ -871,7 +833,7 @@
 							<input type="text"  id="phone-four" placeholder="Ваше телефон" required>
 						</div>
 						<div class="form-input">
-							<button class="fn-btn  btn-form-three">Записаться</button>
+							<button class="fn-btn btn-form-four"  href="#popup1">Записаться</button>
 						</div>
 					</div>
 				</form>
