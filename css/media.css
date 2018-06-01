@@ -241,6 +241,13 @@
 	    font-weight: bold;
 	    margin: 5px 0 15px;
 	}
+	
+	.fn-form-popup{
+		width: 100%;
+		right: 0;
+		margin: 0 auto;
+		bottom: 0;
+	}
 }
 @media only screen and (max-width : 760px) {
 
