@@ -374,7 +374,9 @@ section {
   .fn-contact__form-big .form-input {
     width: 100%; }
     .fn-contact__form-big .form-input input {
-      width: 100%; }
+      width: 100%;
+      font-size: 20px;
+}
 
 .form-title {
   font-size: 24px;
