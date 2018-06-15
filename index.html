@@ -2,83 +2,130 @@
 <html>
 <head>
 	<meta charset="utf-8" />
-	<title>Hader</title>
+	<title>Fenix</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="shortcut icon" href="img/favicon.png" />
 	<link rel="stylesheet" href="libs/bootstrap/bootstrap-grid.min.css" />
 	<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="css/fonts.css" />
 	<link rel="stylesheet" href="libs/slick/slick-theme.css" />
 	<link rel="stylesheet" href="libs/slick/slick.css" />
 	<link rel="stylesheet" href="css/main.css" />
 	<link rel="stylesheet" href="css/media.css" />
 	<link rel="stylesheet" href="libs/fancybox/jquery.fancybox.css" />
+	<style type="text/css">
+
+	</style>
 
 </head>
 <body>
 
-	<div class="fn-wrapper">
+<div class="fn-wrapper">
 
-	<header class="fn-header">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-2 col-sm-2">
-					<div class="fn-header__logo">
-						<a href=""><img src="img/logo.png" class="img-responsive"></a>
-					</div>
-					<a class="menu-cont" href="#">
-						<span class="menu"></span>
-						<span class="menu-txt">
-						</span>
-					 </a>
-				</div>
-				<div class="col-md-8 col-sm-8 ">
-					<nav  class="fn-header__navigation">
-						<ul id="#menu" class="fn-header__navbar">
-							<li><a href="#result">Результаты</a></li>
-							<li><a href="#programm">Программа обучения</a></li>
-							<li><a href="#license">Лицензия</a></li>
-							<li><a href="#smi">СМИ о нас</a></li>
-						</ul>
-					</nav>
-				</div>
-				<div class="col-md-2">
-					<p class="fn-phone none"><a href="">+7 (925) 864 11 13</a></p>
+	<div id="modal_form"><!-- Сaмo oкнo -->
+	      <div class="popup fn-form-popup-two">
+	      	<span id="modal_close">X</span> <!-- Кнoпкa зaкрыть -->
+	      			<h2>Спасибо</h2>
+	      			<p>Наш менеджер свяжется с Вами в ближайшее время.</p>
+	      			<p class="text-blue">Подписывайтесь на наши соц.сети и будьте в курсе последних новостей</p>
+	      			<ul class="fn-popup-sosial">
+	      				<li><a href="" class="sosial">
+	      					<i class="fa fa-vk" aria-hidden="true"></i></a>
+	      					<p>Пишем про инвестиции, акции и компании</p></li>
+	      				<li>
+	      					<a href="" class="sosial">
+	      						<i class="fa fa-google-plus" aria-hidden="true"></i>
+	      					</a>
+	      					<p>Рассказываем интересные истории из мира финансов</p></li>
+	      				<li>
+	      					<a href="" class="sosial">
+	      						<i class="fa fa-youtube-play" aria-hidden="true"></i>
+	      					</a>
+	      					<p>Презентуем наши инвестиционные портфели</p></li>
+	      				<li>
+	      					<a href="" class="sosial-img"><img src="img/logo.png"></a>
+	      					<p>Размышляем на темы, которые нас волнуют</p></li>
+	      			</ul>
+	      		</div>
+	</div>
 
-				</div>
-			</div>
-		</div>
-	</header>
+	<div id="overlay"></div><!-- Пoдлoжкa -->
+
+
 
 
 	<section class="slider">
+
 			<div class="fn-banner">
+				<header class="fn-header">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-2 col-sm-2">
+								<div class="fn-header__logo">
+									<a href=""><img src="img/logo.png" class="img-responsive"></a>
+								</div>
+								<a class="menu-cont" href="#">
+									<span class="menu"></span>
+									<span class="menu-txt">
+									</span>
+								 </a>
+							</div>
+							<div class="col-md-8 col-sm-8 ">
+								<nav  class="fn-header__navigation">
+									<ul id="#menu" class="fn-header__navbar">
+										<li><a href="#result">Результаты</a></li>
+										<li><a href="#programm">Программа обучения</a></li>
+										<li><a href="#license">Лицензия</a></li>
+										<li><a href="#smi">СМИ о нас</a></li>
+									</ul>
+								</nav>
+							</div>
+							<div class="col-md-2">
+								<p class="fn-phone none"><a href="">+7 (925) 864 11 13</a></p>
+
+							</div>
+						</div>
+					</div>
+				</header>
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">
 							<h1>Бесплатное обучение биржевой торговле в первом
 							и единственном институте трейндинга и инвестиций
 							в Российской Федерации!</h1>
-							<h2>Мы набираем бесплатную тестовую
+							<h2>Мы набираем бесплатную тестовую<br>
 							группу из 10 человек!</h2>
-							<form class="fn-contact__form-big">
+							<form class="fn-contact__form-big" >
 								<div class="col-md-4">
 									<div class="form-input">
-										<input type="text" name="name" placeholder="Ваше имя">
+										<input type="text"  placeholder="Ваше имя" required>
 									</div>
 									</div>
 									<div class="col-md-4">
 										<div class="form-input">
-											<input type="text" name="phone" placeholder="Ваше телефон">
+											<input type="text"  id="phone" placeholder="Ваше телефон" required>
 										</div>
 									</div>
 									<div class="col-md-4">
 										<div class="form-input">
-											<button class="fn-btn ">Записаться</button>
+
+											<button class="fn-btn btn-form-four " >Записаться</button>
 										</div>
 									</div>
 
 							</form>
+							<div class="fn-form-popup">
+								<div class="fn-form-popup__wrapper">
+									<p>Иван Иванович записался  на бесплатное обучение</p>
+									<div class="fn-number fn-blue">
+										<span class="timer">8</span>
+										<p>мест осталось</p>
+									</div>
+								</div>
+
+							</div>
+
 						</div>
 
 					</div>
@@ -87,18 +134,73 @@
 
 
 				<div class="fn-banner-two">
+					<header class="fn-header">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-2 col-sm-2">
+									<div class="fn-header__logo">
+										<a href=""><img src="img/logo.png" class="img-responsive"></a>
+									</div>
+									<a class="menu-cont cont" href="#">
+										<span class="menu"></span>
+										<span class="menu-txt">
+										</span>
+									 </a>
+								</div>
+								<div class="col-md-8 col-sm-8 ">
+									<nav  class="fn-header__navigation">
+										<ul id="#menu" class="fn-header__navbar">
+											<li><a href="#result">Результаты</a></li>
+											<li><a href="#programm">Программа обучения</a></li>
+											<li><a href="#license">Лицензия</a></li>
+											<li><a href="#smi">СМИ о нас</a></li>
+										</ul>
+									</nav>
+								</div>
+								<div class="col-md-2">
+									<p class="fn-phone none"><a href="tel:+79258641113">+7 (925) 864 11 13</a></p>
+
+								</div>
+							</div>
+						</div>
+					</header>
 					<div class="container">
 						<div class="row">
+
 							<div class="col-md-12">
 								<h1>Бесплатное обучение биржевой торговле в первом
 								и единственном институте трейндинга и инвестиций
 								в Российской Федерации!</h1>
-							</div>
+								<!-- <div class="fn-form-popup-two">
+									<h2>Спасибо</h2>
+									<a class="close" href="#popup1">&times;</a>
+									<p>Наш менеджер свяжется с Вами в ближайшее время.</p>
+									<p class="text-blue">Подписывайтесь на наши соц.сети и будьте в курсе последних новостей</p>
+									<ul class="fn-popup-sosial">
+										<li><a href="" class="sosial">
+											<i class="fa fa-vk" aria-hidden="true"></i></a>
+											<p>Пишем про инвестиции, акции и компании</p></li>
+										<li>
+											<a href="" class="sosial">
+												<i class="fa fa-google-plus" aria-hidden="true"></i>
+											</a>
+											<p>Рассказываем интересные истории из мира финансов</p></li>
+										<li>
+											<a href="" class="sosial">
+												<i class="fa fa-youtube-play" aria-hidden="true"></i>
+											</a>
+											<p>Презентуем наши инвестиционные портфели</p></li>
+										<li>
+											<a href="" class="sosial-img"><img src="img/logo.png"></a>
+											<p>Размышляем на темы, которые нас волнуют</p></li>
+									</ul> -->
+								</div>
+
 							<div class="col-md-6">
 								<p>По статистике 97% людей сливают свои деньги
 								на финансовых рынках по причине не знания!
 								ВЫ ХОТИТЕ БЫТЬ В ЧИСЛЕ ОСТАВИХСЯ 3%?</p>
-								<h2>Мы набираем бесплатную тестовую  группу из 10 человек!</h2>
+								<h2>Мы набираем бесплатную тестовую   группу из 10 человек!</h2>
 							</div>
 							<div class="col-md-6">
 								<form class="fn-contact__form-big">
@@ -108,41 +210,34 @@
 									<h3 class="title-form-banner">Подать заявку на обучения</h3>
 									<div class="col-md-4 padd-none">
 										<div class="fn-number fn-blue">
-											8
+											<span class="mest__timer-four">8</span>
 											<p>мест осталось</p>
 										</div>
 									</div>
 									<div class="col-md-7 padd-none">
 										<div class="form-input">
-											<input type="text" name="name" placeholder="Ваше имя">
+											<input type="text" name="name" placeholder="Ваше имя" required>
 										</div>
 										<div class="form-input">
-											<input type="text" name="phone" placeholder="Ваше телефон">
+											<input type="text" name="phone" id="phone-two" placeholder="Ваше телефон" required>
 										</div>
 										<div class="form-input">
-											<button class="fn-btn-blue ">Записаться</button>
-										</div>
+											<button  class="fn-btn-blue btn-form-four" >Записаться</button>
+										</div
 									</div>
 
 								</form>
-								<div class="fn-form-popup">
-								     <div class="fn-form-popup__wrapper">
-									<p>Дмитрий Волков записался  на бесплатное обучение</p>
-									<div class="fn-number fn-blue">
-										<span class="timer">8</span>
-										<p>мест осталось</p>
-									</div>
-								</div>
 
 							</div>
 
-							</div>
 
 
 						</div>
 					</div>
 				</div>
 	</section>
+
+
 
 
 
@@ -185,8 +280,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="fn-title-section">
-					<h3>ПОКА ВЫ СОМНЕВАЕТЕСЬ
-ВАШЕ МЕСТО ЗАЙМЕТ КТО-ТО ДРУГОЙ!</h3>
+					<h3>РЕЗУЛЬТАТЫ ПОСЛЕ ОБУЧЕНИЯ</h3>
 				</div>
 				<div class="col-md-4">
 					<div class="fn-results_item">
@@ -234,26 +328,27 @@
 			<div class="container">
 				<div class="row">
 					<div class="fn-title-section fn-text-white">
-						<h3>РЕЗУЛЬТАТЫ ПОСЛЕ ОБУЧЕНИЯ</h3>
+						<h3>ПОКА ВЫ СОМНЕВАЕТЕСЬ
+						ВАШЕ МЕСТО ЗАЙМЕТ КТО-ТО ДРУГОЙ!</h3>
 					</div>
 
 					<div class="col-md-7">
-						<form class="fn-contact__form-big">
+						<form class="fn-contact__form-big ">
 							<h5 class="form-title">Обучайтесь бесплатно. <br>Такого больше не будет НИКОГДА!</h5>
 							<div class="col-md-7 padd-none">
 								<div class="form-input">
-									<input type="text" name="name" placeholder="Ваше имя">
+									<input type="text"  placeholder="Ваше имя" required>
 								</div>
 								<div class="form-input">
-									<input type="text" name="phone" placeholder="Ваше телефон">
+									<input type="text" id="phone-three" placeholder="Ваше телефон" required>
 								</div>
 								<div class="form-input">
-									<button class="fn-btn ">Записаться</button>
+									<button class="fn-btn btn-form-four"  href="#popup1">Записаться</button>
 								</div>
 							</div>
 							<div class="col-md-4 padd-none">
 								<div class="fn-number">
-									8
+									<span class="mest__timer-two">8</span>
 									<p>мест осталось</p>
 								</div>
 							</div>
@@ -300,12 +395,9 @@
 					<div class="fn-programm__item">
 						<div class="col-md-6">
 							<div class="fn-programm__text">
-								<p class="fn-day"><span class="fn-bigtext">1</span>день <span class="fn-time">18:00 - 19:00</span></p>
-								<h4>ГОЛЛАНДСКИЙ АНАЛИЗ</h4>
-								<p>Вы знаете, как выглядит треугольник и флаг?
-                                   Тогда вы уже знакомы с графическим анализом.
-                                   А вот как на этом заработать, мы расскажем
-                                   вам на лекции «Графический анализ - родом из Голландии».</p>
+								<p class="fn-day"><span class="fn-bigtext">2</span>день <span class="fn-time">18:00 - 19:00</span></p>
+								<h4>ФУНДАМЕНТАЛЬНЫЙ АНАЛИЗ</h4>
+								<p class="desrk">Рынок учитывает все события, происходящие в мире. Какие из них больше всего влияют на движение цены? Об этом мы расскажем вам на лекции.</p>
 							</div>
 						</div>
 						<div class="col-md-6">
@@ -315,6 +407,129 @@
 						</div>
 					</div>
 
+
+					<div class="fn-programm__item">
+						<div class="col-md-6">
+							<div class="fn-programm__text">
+								<p class="fn-day"><span class="fn-bigtext">3</span>день <span class="fn-time">18:00 - 19:00</span></p>
+								<h4>СВЕЧНОЙ АНАЛИЗ</h4>
+								<p class="desrk">За сотни лет до образования рынка японцы уже знали, как успешно торговать на нём. Узнайте и вы, прослушав лекцию «Свечи начинают и выигрывают (восточный анализ)».</p>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="fn-programm__image">
+								<img src="img/people.jpg" class="img-responsive">
+							</div>
+						</div>
+					</div>
+
+
+					<div class="fn-programm__item">
+						<div class="col-md-6">
+							<div class="fn-programm__text">
+								<p class="fn-day"><span class="fn-bigtext">4</span>день <span class="fn-time">18:00 - 19:00</span></p>
+								<h4>ТЕХНИЧЕСКИЙ АНАЛИЗ: ПРОГНОЗИРУЙ БУДУЩЕЕ</h4>
+								<p>Чтобы узнать об изменениях на рынке валют в будущем, надо заглянуть... в прошлое! Мы научим вас прогнозировать движение цен и извлекать из этого выгоду.</p>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="fn-programm__image">
+								<img src="img/people.jpg" class="img-responsive">
+							</div>
+						</div>
+					</div>
+
+
+					<div class="fn-programm__item">
+						<div class="col-md-6">
+							<div class="fn-programm__text">
+								<p class="fn-day"><span class="fn-bigtext">5</span>день <span class="fn-time">18:00 - 19:00</span></p>
+								<h4>ИНДИКАТОРЫ. ПРОСТО И СО ВКУСОМ</h4>
+								<p class="desrk">Индикаторы – это специальные программы, позволяющие следить за тенденциями изменения цен и принимать правильные решения. Но можно ли им доверять? Разберёмся вместе на лекции.</p>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="fn-programm__image">
+								<img src="img/people.jpg" class="img-responsive">
+							</div>
+						</div>
+					</div>
+
+					<div class="fn-programm__item">
+						<div class="col-md-6">
+							<div class="fn-programm__text">
+								<p class="fn-day"><span class="fn-bigtext">6</span>день <span class="fn-time">18:00 - 19:00</span></p>
+								<h4>СТРАТЕГИИ И ТАКТИКИ</h4>
+								<p class="desrk">Рынок – это поле битвы, и чтобы добиться успеха, надо уметь находить выход из любых сложностей. Наши преподаватели научат вас выходить победителем из любой ситуации.</p>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="fn-programm__image">
+								<img src="img/people.jpg" class="img-responsive">
+							</div>
+						</div>
+					</div>
+
+					<div class="fn-programm__item">
+						<div class="col-md-6">
+							<div class="fn-programm__text">
+								<p class="fn-day"><span class="fn-bigtext">7</span>день <span class="fn-time">18:00 - 19:00</span></p>
+								<h4>MONEY MANAGEMENT. ТОРГУЙ ПО ПРАВИЛАМ</h4>
+								<p class="desrk">У вас из 10 сделок всего 3 удачных? При помощи обычной математики мы научим вас выводить эту ситуацию в плюс.</p>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="fn-programm__image">
+								<img src="img/people.jpg" class="img-responsive">
+							</div>
+						</div>
+					</div>
+
+					<div class="fn-programm__item">
+						<div class="col-md-6">
+							<div class="fn-programm__text">
+								<p class="fn-day"><span class="fn-bigtext">8</span>день <span class="fn-time">18:00 - 19:00</span></p>
+								<h4>ЗАРАБОТАЙ НА НОВОСТЯХ</h4>
+								<p class="desrk">Новости – это не только источник информации, но и источник доходов: для кого-то выступление президента - рутина, а для вас – ценные сигналы. Как на этом заработать? Вы узнаете обо всем на нашей лекции.</p>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="fn-programm__image">
+								<img src="img/people.jpg" class="img-responsive">
+							</div>
+						</div>
+					</div>
+
+					<div class="fn-programm__item">
+						<div class="col-md-6">
+							<div class="fn-programm__text">
+								<p class="fn-day"><span class="fn-bigtext">9</span>день <span class="fn-time">18:00 - 19:00</span></p>
+								<h4АВТОМАТИЧЕСКАЯ ТОРГОВЛЯ</h4>
+								<p class="desrk">Вы стоите в пробке и с грустью понимаете, что это надолго. Однако вы спокойны за свой капитал - за вас работают отложенные ордера. Данная тактика позволяет автоматизировать процесс торговли и следить за рынком даже тогда, когда у вас нет доступа к компьютеру.</p>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="fn-programm__image">
+								<img src="img/people.jpg" class="img-responsive">
+							</div>
+						</div>
+					</div>
+
+
+					<div class="fn-programm__item">
+						<div class="col-md-6">
+							<div class="fn-programm__text">
+								<p class="fn-day"><span class="fn-bigtext">10</span>день <span class="fn-time">18:00 - 19:00</span></p>
+								<h4>ДНЕВНИК ТРЕЙДЕРА</h4>
+								<p class="desrk">Для того чтобы уверенно себя чувствовать на рынке, необходимо иметь четкий план действий. Как грамотно распланировать свои действия, вы узнаете на лекции «Дневник трейдера».</p>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="fn-programm__image">
+								<img src="img/people.jpg" class="img-responsive">
+							</div>
+						</div>
+					</div>
 
 
 
@@ -338,10 +553,10 @@
 						квалификации «Трейдер».
 					</p>
 					<div class="fn-license__img">
-						<img src="img/license.jpg">
+						<a data-fancybox href="img/license.jpg"><img src="img/license.jpg"></a>
 					</div>
 					<div class="fn-license__img">
-						<img src="img/license.jpg">
+						<a data-fancybox href="img/license.jpg"><img src="img/license.jpg"></a>
 					</div>
 				</div>
 			</div>
@@ -356,42 +571,201 @@
 						<h3>Сми о нас</h3>
 					</div>
 				<div class="fn-students__wrapper">
-					 <div class="fn-student__middle-item">
-					 	<i class="fa fa-quote-right" aria-hidden="true"></i>
-						<p>29 сентября 2017 года, руководитель
-						аналитического департамента
-						ИТИ «ФЕНИКС» Екатерина Туманова,
-						дала интервью корреспонденту газеты
-						«Аргументы и Факты» и ответила
-						на главный вопрос: «Где проще
-						заработать — на фондовом рынке
-						или валютном?</p>
-						<a href="">Прочитать полностью</a>
-					</div>
-					<div class="col-md-7 col-sm-7">
-						<ul class="fn-students__item  ">
-							<li>
-								<img src="img/log1.png">
-							</li>
-							<li>
-								<img src="img/radius.png">
-							</li>
-						</ul>
+					 <div class="fn-student__slide-middle">
+					 	<div class="fn-student__slide-wrapp">
+						 	<div class="fn-student__slide-middle--item">
+						 		 <i class="fa fa-quote-right" aria-hidden="true"></i>
+						 		<p>29 сентября 2017 года, руководитель
+						 			аналитического департамента
+						 			ИТИ «ФЕНИКС» Екатерина Туманова,
+						 			дала интервью корреспонденту газеты
+						 			«Аргументы и Факты» и ответила
+						 			на главный вопрос: «Где проще
+						 			заработать — на фондовом рынке
+						 			или валютном?</p>
+						 		<a href="http://www.aif.ru/money/market/dva_velikih_titana_gde_proshche_zarabotat_na_fondovom_rynke_ili_valyutnom" target="_blank">Прочитать полностью</a>
+						 	</div>
+						 </div>
+						  <div class="fn-student__slide-wrapp">
+						 	<div class="fn-student__slide-middle--item">
+						 		 <i class="fa fa-quote-right" aria-hidden="true"></i>
+						 		<p>
+						 			Телеканал ТВ «Центр», программа «Индекс выгоды»
+						 			13.02.2016 10:30.
+						 			Алена Ботникова, руководитель отделения
+						 			INTENSIVE ИТИ «Феникс», рассказывает об
+						 			институте и проводит экскурсию
+						 			корреспондентам с телеканала ТВ центр. Учись у лучших!
+						 		</p>
+						 		<a href="http://www.tvc.ru/channel/brand/id/20/show/episodes/episode_id/43282/" target="_blank">Прочитать полностью</a>
+						 	</div>
+						 </div>
+
+
+						<div class="fn-student__slide-wrapp">
+							<div class="fn-student__slide-middle--item">
+								 <i class="fa fa-quote-right" aria-hidden="true"></i>
+								<p>
+									6 июня 2015 г. доллару исполнилось 230 лет.
+									В программе «ВЕЧЕР», на канале «Москва 24»,
+									руководитель отделения INTENSIVE ИТИ
+									«Феникс», Алена Ботникова, дала интервью
+									о том, как ей удалось заработать на падении
+									рубля в 2014 г. на финансовых рынках.
+								</p>
+								<a href="http://www.m24.ru/videos/84606" target="_blank">Прочитать полностью</a>
+							</div>
+						</div>
+
+
+						<div class="fn-student__slide-wrapp">
+							<div class="fn-student__slide-middle--item">
+								 <i class="fa fa-quote-right" aria-hidden="true"></i>
+								<p>
+									Выпуск от 5 апреля 2015 года.
+									Программа «Научный детектив» на телеканале
+									«Звезда». Куда катится доллар?
+									В гостях программы руководитель отделения
+									INTENSIVE ИТИ «Феникс» - Алена Ботникова
+									и ее яркое мнение на этот счет. Учись у лучших!
+								</p>
+								<a href="https://www.youtube.com/embed/3p3RHtiDn0k" target="_blank">Прочитать полностью</a>
+							</div>
+						</div>
+
+						<div class="fn-student__slide-wrapp">
+							<div class="fn-student__slide-middle--item">
+								 <i class="fa fa-quote-right" aria-hidden="true"></i>
+								<p>
+									Номер издания 3(135), год: 2015
+									Алена Ботникова, руководитель отделения
+									INTENSIVE ИТИ «Феникс», делится с читателями
+									о том, что работа обязана быть в радость,
+									только в таком случае финансовая независимость
+									и видимая польза от деятельности доставляют
+									истинное удовольствие.
+									Учись у лучших!
+								</p>
+								<a href="http://www.fxmoney.ru/node/3183" target="_blank">Прочитать полностью</a>
+							</div>
+						</div>
+
+						<div class="fn-student__slide-wrapp">
+							<div class="fn-student__slide-middle--item">
+								 <i class="fa fa-quote-right" aria-hidden="true"></i>
+								<p>
+									22 марта 2017 года
+									Председатель комитета по финансовым рынкам
+									и кредитным организациям Торгово-промышленной
+									палаты РФ Яков Миркин и руководитель отделения
+									INTENSIVE ИТИ «Феникс» Алена Ботникова о
+									прогнозах курса рубля на 2017 год.
+									Учись у лучших!
+								</p>
+								<a href="https://www.ridus.ru/search?utf8=%E2%9C%93&query=%D0%91%D0%BE%D1%82%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2%D0%B0" target="_blank">Прочитать полностью</a>
+							</div>
+						</div>
+
+						<div class="fn-student__slide-wrapp">
+							<div class="fn-student__slide-middle--item">
+								 <i class="fa fa-quote-right" aria-hidden="true"></i>
+								<p>
+									Марк Гойхман, выпускник ИТИ «ФЕНИКС»,
+									а также трейдер-аналитик ГК Teletrade,
+									13 июля 2016 г. в г.Минске участвовал в брифинге
+									для СМИ Белоруссии по вопросам перспектив
+									влияния финансовых рынков на экономику
+									Белоруссии и российско-белорусского
+									сотрудничества. По оценкам агентств, 13 июля
+									Марк Гойхман был наиболее цитируемым СМИ
+									экспертом.Учись у лучших!
+								</p>
+								<a href="http://www.belta.by/economics/view/gojhman-opyt-rossii-podtverdil-chto-denominatsija-pozitivnoe-javlenie-201614-2016/" target="_blank">Прочитать полностью</a>
+							</div>
+						</div>
+
+						<div class="fn-student__slide-wrapp">
+							<div class="fn-student__slide-middle--item">
+								 <i class="fa fa-quote-right" aria-hidden="true"></i>
+								<p>
+									Ростовское издание «Деловой квартал»
+									опубликовало ответы Марка Гойхмана,
+									выпускника ИТИ «ФЕНИКС», а также
+									трейдера-аналитика ГК Teletrade,
+									на вопросы газеты об экономике и уровне
+									жизни в области 31.12.2015.
+									Учись у лучших!
+								</p>
+								<a href="http://rostov.dk.ru/news/itogi-goda-koshelki-rostovchan-pohudeli-no-nadezhda-umiraet-posledney-236998223" target="_blank">Прочитать полностью</a>
+							</div>
+						</div>
+
+
 					</div>
 
 					<div class="col-md-5 col-sm-5">
-						<ul class="fn-students__item fn-students__item-left">
-							<li>
+						<div class="fn-students__item   slider-left">
+
+							<div class="item">
+								<img src="img/belta-1.jpg">
+							</div >
+
+							<div class="item">
 								<img src="img/Logo_aif2.png">
-							</li>
-							<li>
+							</div >
+							<div class="item">
+								<img src="img/centr-1.jpg">
+							</div >
+							<div class="item">
 								<img src="img/moscov.png">
-							</li>
-							<li>
-								<img src="img/radius.png">
-							</li>
-						</ul>
+							</div >
+							<div class="item">
+								<img src="img/star-1.jpg">
+							</div >
+							<div class="item">
+								<img src="img/chuzhie-dengi-1.jpg">
+							</div >
+							<div class="item">
+								<img src="img/log1.png">
+							</div >
+
+						</div>
 					</div>
+						<div class="col-md-7 col-sm-7">
+							<div class=" fn-students__item-left slider-right">
+
+								<div class="item">
+									<img src="img/Logo_aif2.png">
+								</div >
+								<div class="item">
+									<img src="img/centr-1.jpg">
+								</div >
+								<div class="item">
+									<img src="img/moscov.png">
+								</div >
+								<div class="item">
+									<img src="img/star-1.jpg">
+								</div >
+								<div class="item">
+									<img src="img/chuzhie-dengi-1.jpg">
+								</div >
+								<div class="item">
+									<img src="img/log1.png">
+								</div >
+								<div class="item">
+									<img src="img/belta-1.jpg">
+								</div >
+
+
+							</div>
+						</div>
+
+					</div>
+
+
+
+
+
 				</div>
 			</div>
 		</div>
@@ -428,7 +802,7 @@
 					</li>
 					<li>
 						<img src="img/ich.png" class="img-responsive">
-						<p>МГУ</p>
+						<p>Институт  социальных наук</p>
 					</li>
 				</ul>
 			</div>
@@ -447,19 +821,19 @@
 				<form class="fn-contact__form">
 					<div class="col-md-4 padd-none">
 						<div class="fn-number">
-							8
+							<span class="mest__timer-three">8</span>
 							<p>мест осталось</p>
 						</div>
 					</div>
 					<div class="col-md-8 padd-none">
 						<div class="form-input">
-							<input type="text" name="name" placeholder="Ваше имя">
+							<input type="text"  placeholder="Ваше имя" required>
 						</div>
 						<div class="form-input">
-							<input type="text" name="phone" placeholder="Ваше телефон">
+							<input type="text"  id="phone-four" placeholder="Ваше телефон" required>
 						</div>
 						<div class="form-input">
-							<button class="fn-btn ">Записаться</button>
+							<button class="fn-btn btn-form-four"  href="#popup1">Записаться</button>
 						</div>
 					</div>
 				</form>
