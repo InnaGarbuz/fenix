@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
 
 
@@ -14,37 +15,54 @@ $("#phone, #phone-two, #phone-three, #phone-four").mask("+7(999) 999-9999");
 
 $("a[data-fancybox]").fancybox();
 
-
-  $('.fn-student__slide-middle').slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
+  $('.fn-programm__slider').slick({
     autoplay: false,
+    slidesToShow: 1,
     nextArrow: '<i class="fa fa-angle-right arrow"></i>',
     prevArrow: '<i class="fa fa-angle-left arrow"></i>',
-    responsive: [
-       {
-         breakpoint: 1200,
-         settings: {
-           slidesToShow: 2,
-           slidesToScroll: 2,
-           infinite: true,
-           dots: true,
-           arrows: false
-         }
-       },
 
-       {
-         breakpoint: 480,
-         settings: {
-           slidesToShow: 1,
-           slidesToScroll: 1,
-           arrows: false
-         }
-       }
-       // You can unslick at a given breakpoint now by adding:
-       // settings: "unslick"
-       // instead of a settings object
-     ]
+  });
+
+
+  $('.slider-left').slick({
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      fade: true,
+      arrows: false,
+      autoplay: true,
+      asNavFor: '.slider-right, .fn-student__slide-middle',
+      responsive: [
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+          // You can unslick at a given breakpoint now by adding:
+          // settings: "unslick"
+          // instead of a settings object
+        ]
+    });
+
+  $('.slider-right').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: false,
+    autoplay: true,
+    asNavFor: '.slider-left, .fn-student__slide-middle',
+
+    });
+
+
+
+   $('.fn-student__slide-middle').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    autoplay: true,
+    asNavFor: '.slider-left, .slider-right',
   });
 
 
