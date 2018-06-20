@@ -1,93 +1,68 @@
+$(document).ready(function () {
 
-$(document).ready(function(){
+    $('.menu-cont').on('click', function () {
 
+        $('.menu').toggleClass('active');
+        $('.fn-header__navigation').slideToggle(200);
 
-$('.menu-cont').on('click', function() {
-
-  $('.menu').toggleClass('active');
-  $('.fn-header__navigation').slideToggle(200);
-
-});
+    });
 
 
+    $("#phone, #phone-two, #phone-three, #phone-four").mask("+7(999) 999-9999");
 
-$("#phone, #phone-two, #phone-three, #phone-four").mask("+7(999) 999-9999");
-
-$("a[data-fancybox]").fancybox();
-
-  $('.fn-programm__slider').slick({
-    autoplay: false,
-    slidesToShow: 1,
-    nextArrow: '<i class="fa fa-angle-right arrow"></i>',
-    prevArrow: '<i class="fa fa-angle-left arrow"></i>',
-
-  });
+    $("a[data-fancybox]").fancybox();
 
 
-  $('.slider-left').slick({
-      slidesToShow: 2,
-      slidesToScroll: 1,
-      fade: true,
-      arrows: false,
-      autoplay: true,
-      asNavFor: '.slider-right, .fn-student__slide-middle',
-      responsive: [
-          {
-            breakpoint: 480,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
+    $('.fn-student__slide-middle').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: false,
+        nextArrow: '<i class="fa fa-angle-right arrow"></i>',
+        prevArrow: '<i class="fa fa-angle-left arrow"></i>',
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    infinite: true,
+                    dots: true,
+                    arrows: false
+                }
+            },
+
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false
+                }
             }
-          }
-          // You can unslick at a given breakpoint now by adding:
-          // settings: "unslick"
-          // instead of a settings object
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
         ]
     });
 
-  $('.slider-right').slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    arrows: false,
-    autoplay: true,
-    asNavFor: '.slider-left, .fn-student__slide-middle',
 
-    });
+    $(".fn-header__navbar").on("click", "a", function (event) {
+        event.preventDefault();
+        var id = $(this).attr('href'),
+            top = $(id).offset().top;
 
-
-
-   $('.fn-student__slide-middle').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    fade: true,
-    autoplay: true,
-    asNavFor: '.slider-left, .slider-right',
-  });
-
-
-
-    $(".fn-header__navbar").on("click","a", function (event) {
-      event.preventDefault();
-      var id  = $(this).attr('href'),
-        top = $(id).offset().top;
-
-      $('body,html').animate({scrollTop: top}, 1500);
+        $('body,html').animate({scrollTop: top}, 1500);
     });
 
 
     // open modal
     var wrap = $('#wrapper'),
-         btn = $('.open-modal-btn'),
-         modal = $('.cover, .modal, .content');
+        btn = $('.open-modal-btn'),
+        modal = $('.cover, .modal, .content');
 
-    btn.on('click', function() {
-      modal.fadeIn();
+    btn.on('click', function () {
+        modal.fadeIn();
     });
-
-
-
-
 
 });
 
@@ -124,8 +99,11 @@ $(function () {
      * меняем счетчик и апдейтим значение во всех местах где он используеться
      */
     function changePlaceCounter() {
+        var nameArr = ['Алексей', 'Максим', 'Иван', 'Ксения', 'Диана', 'Ирина', 'Денис', 'Николай', 'Виталий'];
         counter--;
         $('.mest__timer-two, .mest__timer-three, .mest__timer-four').html(counter);
+        $('#usernamePopup').text(nameArr[counter] + " записался  на бесплатное обучение");
+
         $('.timer').html(counter);
     }
 
@@ -141,6 +119,8 @@ $(document).ready(function () { // вся мaгия пoсле зaгрузки с
                 $('#modal_form')
                     .css('display', 'block') // убирaем у мoдaльнoгo oкнa display: none;
                     .animate({opacity: 1, top: '5%'}, 200); // плaвнo прибaвляем прoзрaчнoсть oднoвременнo сo съезжaнием вниз
+                sendStatisticAndMail();
+
             });
     });
     /* Зaкрытие мoдaльнoгo oкнa, тут делaем тo же сaмoе нo в oбрaтнoм пoрядке */
@@ -154,3 +134,25 @@ $(document).ready(function () { // вся мaгия пoсле зaгрузки с
             );
     });
 });
+
+function sendStatisticAndMail() {
+    let clickId = location.search.split('clickid=')[1];
+    console.log(clickId);
+    // 1. Создаём новый объект XMLHttpRequest
+    var xhr = new XMLHttpRequest();
+
+// 2. Конфигурируем его: GET-запрос на URL 'phones.json'
+    xhr.open('GET', 'https://cors.io/?http://tivoha.com/click.php?cnv_id=' + clickId, false);
+
+// 3. Отсылаем запрос
+    xhr.send();
+
+// 4. Если код ответа сервера не 200, то это ошибка
+    if (xhr.status != 200) {
+        // обработать ошибку
+        // alert(xhr.status + ': ' + xhr.statusText); // пример вывода: 404: Not Found
+    } else {
+        // вывести результат
+        // alert(xhr.responseText); // responseText -- текст ответа.
+    }
+}
