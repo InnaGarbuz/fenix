@@ -676,7 +676,7 @@ section {
   padding: 20px;
   background: #fff;
   border-radius: 5px;
-  width: 80%;
+  width: 100%;
   position: relative;
   -webkit-transition: all 5s ease-in-out;
   -o-transition: all 5s ease-in-out;
