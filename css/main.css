@@ -699,14 +699,14 @@ section {
   .popup .content {
     max-height: 30%;
     overflow: auto; }
-
-@media screen and (max-width: 700px) {
-  width: 70%; }
-
-}
-
 .fn-popup-sosial li p.p-img {
     margin: 13px 0;
     position: absolute;
     bottom: -43px;
 }
+@media screen and (max-width: 700px) {
+  width: 70%; }
+
+}
+
+
