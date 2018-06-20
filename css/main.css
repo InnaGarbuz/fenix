@@ -590,7 +590,8 @@ section {
   list-style: none; }
   .fn-popup-sosial li {
     display: inline-block;
-    width: 22%;
+    width: 32%;
+    position: relative;
     margin: 0 4px; }
     .fn-popup-sosial li .sosial {
       color: #1b3a4f;
@@ -608,8 +609,11 @@ section {
       background: rgba(255, 255, 255, 0);
       margin: 0 auto 18px; }
       .fn-popup-sosial li .sosial-img img {
-        width: 64%;
-        margin: 0 auto; }
+           width: 70%;
+    margin: 0 auto;
+    position: absolute;
+    top: 15px;
+    left: 30px; }
     .fn-popup-sosial li p {
       color: #1b3a4f;
       font-size: 18px; }
@@ -698,3 +702,12 @@ section {
 
 @media screen and (max-width: 700px) {
   width: 70%; }
+
+}
+
+.fn-popup-sosial li p.p-img {
+    margin: 13px 0;
+    position: absolute;
+    bottom: -43px;
+}
+
