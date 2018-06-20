@@ -671,7 +671,7 @@ section {
   background: rgba(0, 0, 0, 0.7); }
 
 .popup {
-  margin: 70px auto;
+  margin: 0 auto;
   padding: 20px;
   background: #fff;
   border-radius: 5px;
