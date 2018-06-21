@@ -1,71 +1,95 @@
-$(document).ready(function () {
 
-    $('.menu-cont').on('click', function () {
-
-        $('.menu').toggleClass('active');
-        $('.fn-header__navigation').slideToggle(200);
-
-    });
+$(document).ready(function(){
 
 
-    $("#phone, #phone-two, #phone-three, #phone-four").mask("+7(999) 999-9999");
+$('.menu-cont').on('click', function() {
 
-    $("a[data-fancybox]").fancybox();
+  $('.menu').toggleClass('active');
+  $('.fn-header__navigation').slideToggle(200);
+
+});
 
 
-    $('.fn-student__slide-middle').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        autoplay: false,
-        nextArrow: '<i class="fa fa-angle-right arrow"></i>',
-        prevArrow: '<i class="fa fa-angle-left arrow"></i>',
-        responsive: [
-            {
-                breakpoint: 1200,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    infinite: true,
-                    dots: true,
-                    arrows: false
-                }
-            },
 
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    arrows: false
-                }
+$("#phone, #phone-two, #phone-three, #phone-four").mask("+7(999) 999-9999");
+
+$("a[data-fancybox]").fancybox();
+
+  $('.fn-programm__slider').slick({
+    autoplay: false,
+    slidesToShow: 1,
+    nextArrow: '<i class="fa fa-angle-right arrow"></i>',
+    prevArrow: '<i class="fa fa-angle-left arrow"></i>',
+
+  });
+
+
+  $('.slider-left').slick({
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      fade: true,
+      arrows: false,
+      autoplay: true,
+      asNavFor: '.slider-right, .fn-student__slide-middle',
+      responsive: [
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
             }
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
+          }
+          // You can unslick at a given breakpoint now by adding:
+          // settings: "unslick"
+          // instead of a settings object
         ]
     });
 
+  $('.slider-right').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: false,
+    autoplay: true,
+    asNavFor: '.slider-left, .fn-student__slide-middle',
 
-    $(".fn-header__navbar").on("click", "a", function (event) {
-        event.preventDefault();
-        var id = $(this).attr('href'),
-            top = $(id).offset().top;
+    });
 
-        $('body,html').animate({scrollTop: top}, 1500);
+
+
+   $('.fn-student__slide-middle').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    autoplay: true,
+    asNavFor: '.slider-left, .slider-right',
+  });
+
+
+
+    $(".fn-header__navbar").on("click","a", function (event) {
+      event.preventDefault();
+      var id  = $(this).attr('href'),
+        top = $(id).offset().top;
+
+      $('body,html').animate({scrollTop: top}, 1500);
     });
 
 
     // open modal
     var wrap = $('#wrapper'),
-        btn = $('.open-modal-btn'),
-        modal = $('.cover, .modal, .content');
+         btn = $('.open-modal-btn'),
+         modal = $('.cover, .modal, .content');
 
-    btn.on('click', function () {
-        modal.fadeIn();
+    btn.on('click', function() {
+      modal.fadeIn();
     });
 
-});
 
+
+
+
+});
 //counter
 $(function () {
 
