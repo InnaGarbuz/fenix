@@ -711,7 +711,7 @@ section {
 }
 
 .fn-funist, .fn-funist-second{
-	background: url('../img/bg.jpg');
+	background: #01ddb5;
 	background-size: cover;
 	padding: 40px 0;
 
