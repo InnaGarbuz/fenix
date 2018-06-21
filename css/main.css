@@ -709,3 +709,77 @@ section {
   width: 70%; }
 
 }
+
+.fn-funist, .fn-funist-second{
+	background: url('../img/bg.jpg');
+	background-size: cover;
+	padding: 40px 0;
+
+}
+
+.fn-funist__foto img{
+	width: 100%;
+}
+
+.pr{
+	padding-right: 0;
+}
+
+.pl{
+	padding-left: 0;
+}
+
+
+.fn-text-left{
+	text-align:  left;
+}
+
+.fn-funist__text{
+	text-align: center;
+}
+
+.fn-funist__text h4{
+	font-weight:  bold;
+	font-size: 30px;
+	color:  #fff;
+}
+
+.fn-funist .fn-funist__foto img{
+	width: 100%;
+} 
+
+.fn-funist__text .fn-btn{
+	margin: 0 auto;
+}
+
+.fn-funist-second{
+	margin:  40px 0 0;
+	overflow: hidden;
+	padding-bottom:  20%;
+position: relative;
+}
+
+.fn-funist-second .fn-title-section {
+	width: 100%;
+	text-transform: capitalize;
+	}
+
+.fn-funist-second .fn-title-section h3 {
+	text-transform: capitalize;
+}
+
+.fn-funist .fn-title-section h3 {
+	text-transform: capitalize;
+}
+
+.fn-funist-second .fn-funist__text .fn-btn{
+	margin:  0;
+}
+
+
+
+.elementf{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
