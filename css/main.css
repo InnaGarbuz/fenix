@@ -593,7 +593,8 @@ section {
     width: 32%;
     position: relative;
     margin: 0 4px;
-    height: 100px;}
+    height: 100px;
+    }
     .fn-popup-sosial li .sosial {
       color: #1b3a4f;
       background: #fff;
@@ -610,7 +611,7 @@ section {
       background: rgba(255, 255, 255, 0);
       margin: 0 auto 18px; }
       .fn-popup-sosial li .sosial-img img {
-           width: 57%;
+            width: 57%;
     margin: 0 auto;
     position: absolute;
     top: -28px;
@@ -671,7 +672,7 @@ section {
   background: rgba(0, 0, 0, 0.7); }
 
 .popup {
-  margin: 0 auto;
+  margin: auto;
   padding: 20px;
   background: #fff;
   border-radius: 5px;
@@ -700,6 +701,7 @@ section {
   .popup .content {
     max-height: 30%;
     overflow: auto; }
+
 .fn-popup-sosial li p.p-img {
     margin: 13px 0;
     position: absolute;
@@ -710,10 +712,9 @@ section {
 
 }
 
-.fn-funist, .fn-funist-second{
-	background: #01ddb5;
-	background-size: cover;
-	padding: 40px 0;
+.fn-funist{
+    background: #01ddb5;
+    padding: 40px 0;
 
 }
 
@@ -753,6 +754,7 @@ section {
 }
 
 .fn-funist-second{
+	background: #01ddb5;
 	margin:  40px 0 0;
 	overflow: hidden;
 	padding-bottom:  20%;
