@@ -771,8 +771,10 @@ position: relative;
 }
 
 .fn-funist-second .fn-funist__text .fn-btn{
-	margin:  0;
+	margin:  0 auto;
+	width: 377px;
 }
+
 
 
 
