@@ -712,10 +712,9 @@ section {
 
 }
 
-.fn-funist, .fn-funist-second{
-	background: #01ddb5;
-	background-size: cover;
-	padding: 40px 0;
+.fn-funist{
+    background: #01ddb5;
+    padding: 40px 0;
 
 }
 
@@ -755,6 +754,7 @@ section {
 }
 
 .fn-funist-second{
+	background: #01ddb5;
 	margin:  40px 0 0;
 	overflow: hidden;
 	padding-bottom:  20%;
