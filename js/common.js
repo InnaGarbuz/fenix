@@ -90,7 +90,6 @@ $("a[data-fancybox]").fancybox();
 
 
 });
-
 //counter
 $(function () {
 
